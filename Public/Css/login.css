@@ -1,0 +1,108 @@
+#Index_fenlei{display: none;}
+*, body {
+    font-family: 'Microsoft YaHei';
+    margin: 0;
+    padding: 0;
+}
+.news_login {
+    float: none;
+    margin: 0 auto;
+    width: 1100px;
+}
+.news_login_left {
+    border-right: 1px dashed #DDDDDD;
+    width: 527px;
+}
+.login_form {
+    border: 1px solid #EEEEEE;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    margin-top: 40px;
+    opacity: 0.95;
+    padding: 20px 40px;
+    width: 300px;
+}
+.login_form .news_login_title {
+    border-bottom: 1px solid #EEEEEE;
+    color: #666666;
+    font-size: 19px;
+    height: 30px;
+    width: 100%;
+}
+.news_login .news_loginLeft {
+    float: left;
+    margin-top: 40px;
+}
+.news_login .news_loginLeft ul.news_loginLeft_list li {
+    margin: 10px 0 0;
+    width: 100%;
+}
+.news_login .news_loginLeft ul.news_loginLeft_list li input.new_loginTxt {
+    background: url("../Images/shopping_login.png") no-repeat scroll -1px -182px transparent;
+    border: medium none;
+    color: #BBBBBB;
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    width: 207px;
+}
+.news_login .news_loginLeft ul.news_loginLeft_list li .new_loginName {
+    color: #393939;
+    font-size: 14px;
+    line-height: 33px;
+    text-align: right;
+    width: 75px;
+}
+.news_login .news_loginLeft ul.news_loginLeft_list li .login_btn {
+    background: none repeat scroll 0 0 #BE0929;
+    border: medium none;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    height: 35px;
+    letter-spacing: 1px;
+    line-height: 35px;
+    text-align: center;
+    width: 140px;
+}
+.news_login .news_loginLeft ul.news_loginLeft_list li .news_loginRadio {
+    margin-left: 5px;
+}
+.news_login .news_loginLeft ul.news_loginLeft_list li a {
+    text-decoration: underline;
+}
+.news_login .news_login_left .login_other {
+    margin-top: 30px;
+    width: 528px;
+}
+.news_login .news_login_left .login_other .login_other_title {
+    float: left;
+    height: 29px;
+    line-height: 29px;
+}
+.news_login .news_login_left .login_other .login_other_btn a span {
+    background-image: url("../Images/NEWS_login.png");
+}
+.news_login .news_login_left .login_other .login_other_btn .login_other_btn00 {
+    background-position: 0 -528px;
+    float: left;
+    height: 29px;
+    margin-right: 10px;
+    width: 97px;
+}
+.news_login .news_login_left .login_other .login_other_btn .login_other_btn11 {
+    background-position: -111px -528px;
+}
+.news_login .news_login_left .login_other .login_other_btn .login_other_btn22 {
+    background-position: -222px -528px;
+}
+.news_login .news_login_left .login_other .login_other_btn .login_other_btn33 {
+    background-position: -333px -528px;
+}
+
+
+.news_loginRight {
+    display: inline;
+    float: left;
+    margin: 40px 0 0 65px;
+    width: 420px;
+}

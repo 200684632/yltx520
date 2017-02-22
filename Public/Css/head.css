@@ -1,0 +1,340 @@
+*{padding: 0;margin: 0;}
+div, p, span, h1, h2, h3, ul, li {
+    float: left;
+    font-size: 12px;
+}
+li{list-style: none;}
+img{border: 0 none;float: left;}
+/*头部*/
+#Index_head{
+	float: left;
+	width: 100%;
+	z-index: 100;
+}
+#Index_top{
+	background: url(../Images/NEWS_topbg.jpg) repeat-x ;
+	float: left;
+	height: 59px;
+	margin-bottom: 8px;
+	width: 100%;
+}
+#Index_top #Index_topLeft{
+	background: #fff;
+	float: left;
+	height: 59px;
+}
+#Index_top #Index_topLeft img{
+	border: 0 none;	
+	float: left;
+}
+a, a:hover{color:#393939;text-decoration: none;}
+#Index_top #Index_topLeft span.top_logo_line{background: url(../Images/NEWS_logopic.jpg) no-repeat;float: left;height: 59px;width: 5px;}
+/*顶部登陆栏右边*/
+#Index_top ul#Index_topRight{
+	 float: right;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 211px;
+}
+#Index_top ul#Index_topRight li {
+    background: url("../Images/Index_topRight.gif") no-repeat scroll right center transparent;
+    float: left;
+    padding: 0 10px;
+    text-align: right;
+}
+#Index_top ul#Index_topRight li a {
+    color: #393939;
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+}
+#Index_top ul#Index_topRight li a.buyCar {
+    background: url("../Images/NEWS_INDEX.gif") no-repeat scroll -245px -1172px transparent;
+    padding-left: 20px;
+}
+#Index_1100, .Index_1100{
+	float: none;
+	margin: 0 auto;
+	width: 1100px;
+}
+.index_logo, .index_logo1 {
+    background: url("../Images/NEWS_INDEX.gif") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 41px;
+    margin: 10px 0 0;
+    width: 201px;
+}
+.index_radio_img{margin-left: 5px;margin-top: 9px;}
+.search {
+    float: left;
+    margin: 10px 0 0 50px;
+    width: 460px;
+}
+.search input.search_text {
+    border: 1px solid #565656;
+    color: #BBBBBB;
+    float: left;
+    font: 14px 'Microsoft YaHei';
+    height: 29px;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 80px;
+    width: 300px;
+}
+.search input.search_text:focus {
+    background: none repeat scroll 0 0 #FDFDFD;
+    box-shadow: 2px 1px 3px #D2D2D2 inset;
+    outline: medium none;
+}
+.search input.search_btn {
+    background: url("../Images/NEWS_INDEX.gif") no-repeat scroll -227px 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: 14px 'Microsoft YaHei';
+    height: 34px;
+    margin-left: -60px;
+    text-indent: -999px;
+    width: 80px;
+}
+.search .search_hot {
+    color: #E4393C;
+    font: 12px 'Microsoft YaHei';
+    margin-top: 5px;
+}
+.search .search_hot a {
+    color: #7B7B7B;
+}
+.search .search_hot a:hover {
+    color: #CA0A26;
+}
+.dh {
+    background: url("../Images/NEWS_dh_bg.jpg") repeat-x scroll 0 0 transparent;
+    margin-top: 15px;
+    width: 100%;
+}
+ul.Index_nav {
+    height: 45px;
+}
+.dh ul {
+    margin: 0;
+    padding: 0;
+}
+ul.Index_nav li a {
+    color: #FFFFFF;
+}
+.Index_dh_top {
+    position: relative;
+    width: 1100px;
+    z-index: 1;
+}
+#Index_1100, .Index_1100 {
+    float: none;
+    margin: 0 auto;
+    width: 1100px;
+}
+
+ul.Index_nav li.nav_fenlei {
+    background: none repeat scroll 0 0 #000000;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+    width: 205px;
+}
+
+ul.Index_nav li, ul.Index_nav02 li {
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+    line-height: 46px;
+    margin: 0 15px;
+}
+ul.Index_nav li.Index_navbg {
+    background: url("../Images/NEWS_INDEX.gif") no-repeat scroll -340px 0 transparent;
+    float: left;
+    height: 37px;
+    margin: 5px 0 0;
+    width: 2px;
+}
+
+ul.Index_nav02 {
+    display: block;
+    float: left;
+    margin-left: 215px;
+}
+
+ul.Index_nav02 li {
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+    line-height: 46px;
+    margin: 0 30px;
+}
+
+#Index_fenlei {
+    display: block;
+    float: left;
+    font: 12px 'Microsoft YaHei';
+    height: 100%;
+    left: 0;
+    padding-top: 46px;
+    position: absolute;
+    top: 0;
+    width: 205px;
+    z-index: 10000;
+}
+
+ul.fenlei {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #D1D1D1;
+    border-right: 1px solid #D1D1D1;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+    display: block;
+    padding: 0;
+    width: 205px;
+}
+
+ul.fenlei li {
+    background: none repeat scroll 0 0 #F3F1F2;
+    color: #393939;
+    float: left;
+    line-height: 20px;
+    padding: 0;
+    width: 205px;
+}
+ul.fenlei li .icon {
+    background: url("../Images/NEWS_INDEX.gif") no-repeat scroll 0 -60px transparent;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 15px;
+    margin: 8px 0 0 10px;
+    text-indent: 25px;
+}
+
+ul.fenlei li .fenlei_list {
+    display: inline;
+    float: left;
+    font-size: 12px;
+    margin: 0 0 2px 12px;
+    width: 190px;
+}
+
+ul.fenlei li .fenlei_list a {
+    display: block;
+    float: left;
+    line-height: 23px;
+    margin-right: 10px;
+    width: 50px;
+}
+ul.fenlei li.nonelistbg {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+ul.fenlei li .icon04 {
+    background-position: -278px -60px;
+}
+ul.fenlei li .icon03 {
+    background-position: -185px -60px;
+}
+ul.fenlei li .icon02 {
+    background-position: -93px -60px;
+}
+
+ul.fenlei li .icon06 {
+    background-position: -463px -60px;
+}
+ul.fenlei li .icon05 {
+    background-position: -371px -60px;
+}
+
+/*底部*/
+#Index_foot {
+    background: none repeat scroll 0 0 #F1F1F1;
+    float: left;
+    height: 220px;
+    margin-top: 5px;
+    width: 1100px;
+}
+.Index_foot_NR {
+    background: url("../Images/NEWS_INDEX.gif") no-repeat scroll -750px -358px transparent;
+    display: inline;
+    float: left;
+    margin: 30px 0 0 14px;
+    width: 150px;
+}
+.Index_foot_title {
+    color: #393939;
+    font-family: 'Microsoft YaHei';
+    font-size: 20px;
+    font-weight: bold;
+}
+.Index_foot_NR a {
+    color: #393939;
+}
+.Index_foot_NR ul {
+    margin-top: 10px;
+}
+.Index_foot_NR ul li {
+    background: url("../Images/NEWS_INDEX.gif") no-repeat scroll 0 -572px transparent;
+    color: #7B7B7B;
+    float: left;
+    font-family: 'Microsoft YaHei';
+    font-size: 12px;
+    line-height: 22px;
+    text-indent: 10px;
+    width: 170px;
+}
+.Index_foot_black {
+    background: none repeat scroll 0 0 #393939;
+    color: #FFFFFF;
+    float: left;
+    font-family: 'Microsoft YaHei';
+    font-size: 13px;
+    height: 36px;
+    line-height: 36px;
+    margin-top: 8px;
+    text-align: center;
+    width: 1100px;
+}
+.Index_foot_black a {
+    color: #FFFFFF;
+    margin: 0 10px;
+}
+.Index_foot_black00 ul li {
+    margin-right: 10px;
+}
+.Index_foot_black00 {
+    color: #000000;
+    float: left;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    width: 1100px;
+}
+.Index_foot_pinpai {
+    background: url("../Images/NEWS_INDEX.gif") no-repeat scroll 0 -277px transparent;
+    float: left;
+    height: 48px;
+    margin: 0 0 0 10px;
+    width: 1080px;
+}
+#Index_goTopBtn {
+    bottom: 200px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 30px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+}
+#Index_fenlei .fenlei li.bianse {
+    background: #CA0A2A;
+    color: #fff;
+}
+#Index_fenlei .fenlei li.bianse div{color: #fff;}
+#Index_fenlei .fenlei li.bianse div.fenlei_list a{color: #fff;}
+#Index_fenlei .fenlei li.bianse div.fenlei_list a:hover{text-decoration: underline;}

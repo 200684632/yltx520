@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+	<link rel="stylesheet" href="__ROOT__/Public/Uploadify/uploadify.css" />
+	<script type="text/javascript" src='__ROOT__/Public/Uploadify/jquery.uploadify.js'></script>
+	<script type="text/javascript" src='__ROOT__/Public/Ueditor/ueditor.config.js'></script>
+	<script type="text/javascript" src='__ROOT__/Public/Ueditor/ueditor.all.min.js'></script>
+</head>
+<body>
+	<form action="{:U('updateclass')}/id/{$data[0]['id']}" method='post'>
+		<table class='table table-bordered' style='width:80%;margin:10px auto;'>
+			<tr>
+				<th colspan='2'>修改</th>
+			</tr>
+			<tr>
+				<td colspan='2'>标题:<input type='text' name='title' value="{$data[0]['name']}">
+			</tr>
+			<tr>
+				<td colspan='2'>
+					<input type="hidden" name='pid' value='{$data[0]["id"]}'/>
+					<input type="submit" value='上传' class='btn'/>
+				</td>
+			</tr>
+		</table>
+		
+	</form>
+
+<style type="text/css">
+	.add-spec, .del-spec{
+		display: inline-block;
+		width: 80px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		cursor: pointer;
+		background: #444444;
+		color: #fff;
+		border-radius: 6px;
+	}
+	.del-spec{
+		background: #f00;
+	}
+</style>
+<script type="text/javascript">
+	
+	//商品图册上传 
+	$("#photo").uploadify({
+		buttonImage	: '__ROOT__/Public/Uploadify/btn.png',
+		swf			: '__ROOT__/Public/Uploadify/uploadify.swf',
+		uploader	: '{:U("uploadPhoto")}',
+		//解决SESSION掉失问题
+		formData	: {'<?php echo session_name();?>' : '<?php echo session_id();?>'},
+		onUploadSuccess : function(file, data, response) {
+			eval('data=' + data);
+			if (data.status == 0)
+			{
+				alert(data.msg);
+			}
+			else
+			{
+				var div = '<div style="float:left;margin:10px;display:none">';
+					div += '<img src="__ROOT__/Uploads/Photo/' + data.medium + '" width="200" height="200"/>';
+					div += '<input type="hidden" name="max[]" value="' + data.max + '"/>';
+					div += '<input type="hidden" name="medium[]" value="' + data.medium + '"/>';
+					div += '<input type="hidden" name="mini[]" value="' + data.mini + '"/>';
+					div += '<span class="del-photo">删除</span>';
+					div += '</div>';
+				$('#photo-list').append(div).find('div').fadeIn(2000);
+			}
+        }
+	});
+
+	//删除图册
+	$('.del-photo').live('click', function () {
+		var obj = $(this).parent();
+		var mini = $(this).prev();
+		var medium = mini.prev();
+		var max = medium.prev()
+		var photo = {
+			'mini' : mini.val(),
+			'medium' : medium.val(),
+			'max' : max.val()
+		};
+
+		$.post('{:U("delPhoto")}', photo, function (data) {
+			if (data == 1)
+			{
+				obj.remove();
+			}
+			else
+			{
+				alert('删除失败');
+			}
+		}, 'json');
+	});
+
+</script>
+</body>
+</html>

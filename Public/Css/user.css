@@ -1,0 +1,125 @@
+*{padding: 0;margin: 0;}
+#Index_fenlei{display: none;}
+.userCenterContent {
+    float: none;
+    height: auto;
+    margin: 0 auto;
+    width: 1100px;
+}
+.user_menu {
+    float: left;
+    font-family: 'Microsoft YaHei';
+    width: 200px;
+}
+.user_menu_title {
+    background: url("../Images/USER_bg.png") no-repeat scroll -1px -441px transparent;
+    font-size: 15px;
+    font-weight: bold;
+    height: 47px;
+    line-height: 47px;
+    text-indent: 80px;
+    width: 200px;
+}
+a, a:hover {
+    color: #393939;
+    text-decoration: none;
+}
+ul.user_menu_list {
+    background: none repeat scroll 0 0 #FBFBFB;
+    border: 1px solid #E6E6E6;
+    margin: 8px 0 0;
+    width: 198px;
+}
+ul.user_menu_list li {
+    border-bottom: 1px dashed #AFAFAF;
+    color: #393939;
+    font-family: 'Microsoft YaHei';
+    height: 30px;
+    line-height: 30px;
+    width: 198px;
+}
+ul.user_menu_list li.user_menu_h1 {
+    background: url("../Images/USER_bg.png") no-repeat scroll 0 -503px transparent;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-align: center;
+    width: 197px;
+}
+ul.user_menu_list li span.dian {
+    margin-left: 50px;
+}
+ul.user_menu_list li span.user_menu_listName {
+    margin-left: 10px;
+}
+.user_dingdan {
+    width: 895px; float: right;overflow: hidden;height: 485px;
+}
+.user_dingdan iframe{
+    width: 100%;
+    height: 100%;
+    border:none;
+    position: relative;
+}
+.welcome_list {
+    border-bottom: 1px solid #E2E2E2;
+    line-height: 25px;
+    margin: 10px 0 0 5px;
+    padding-bottom: 20px;
+    width: 880px;
+}
+.welcome_list span {
+    margin-left: 15px;
+    width: 100%;
+}
+.welcome_list00 {
+    border-bottom: 1px solid #E2E2E2;
+    margin: 10px 0 5px 5px;
+    padding-bottom: 10px;
+    width: 880px;
+}
+.welcome_list00 .welcome_list00_tishi00 {
+    margin: 10px 0 0 20px;
+    width: 180px;
+}
+.welcome_list00 .welcome_list00_tishi00 ul li {
+    line-height: 25px;
+    width: 100%;
+}
+.welcome_list00 .welcome_list00_tishi11 {
+    width: 200px;
+}
+.welcome_list00 .welcome_list00_tishi00 ul li {
+    line-height: 25px;
+    width: 100%;
+}
+.dingdan_table {
+    margin-top: 10px;
+}
+.dingdan_table .dingdantable_title {
+    background: url("../Images/USER_bg.png") no-repeat scroll 0 -360px transparent;
+    font-family: 'Microsoft YaHei';
+    height: 51px;
+    line-height: 51px;
+    width: 895px;
+}
+.dingdan_table .dingdantable_title .dingdantable_title01 {
+    text-indent: 20px;
+    width: 310px;
+}
+.dingdan_tableNr {
+    border-bottom: 1px solid #EEEEEE;
+    float: left;
+    margin: 0 0 10px;
+    padding-bottom: 5px;
+    width: 895px;
+}
+.dingdan_tableNr_list {
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    text-indent: 20px;
+}
+.dingdan_tableNr_list a {
+    color: #C80A28;
+}
+

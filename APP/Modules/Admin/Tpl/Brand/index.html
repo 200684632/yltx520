@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+	<style>
+		.table td{text-align:center;vertical-align:middle;}
+	</style>
+</head>
+<body>
+	<table class='table table-bordered' style='width:80%;margin:10px auto;'>
+				<tr><td><a href="{:U('Brand/add')}" target="iframe">上传</a></td></tr>
+				<tr>
+				<th>ID</th>
+				<th>标题</th>
+				<th>图片/视频</th>
+				<th>操作</th>
+				</tr>
+				
+			<foreach name='goods' item='v'>
+				<tr>
+					<td><div>{$v.id}</div></td>
+					<td><div>{$v.title}</div></td>
+						<td>
+							<foreach name="v['images']" item="n">
+								<if condition="$v['type']!='vedio'">
+							   		<img src="__ROOT__/Uploads/File/{$n}" width="100px" heigth="100px"/>
+							   		<a href="{:U('Brand/delone',array('id' => $v['id'],'aid'=>$key))}" onclick="if (confirm('确定要删除吗？')) return true; else return false;">删除</a>
+							   		<else/>
+							   		<p><video class="edui-upload-video  vjs-default-skin video-js" controls="" preload="none" width="420" height="280" src="__ROOT__/Uploads/File/{$n}" data-setup="{}"></video></p>
+							   	</if>
+							 </foreach>
+						</td>
+					<td><a href="{:U('Brand/del',array('id' => $v['id']))}" onclick="if (confirm('确定要全部删除吗？')) return true; else return false;" class='btn btn-danger'>全部删除</a></td>
+				</tr>	
+			</foreach>
+	</table>			
+	<div style='text-align: center;margin: 0 auto;'>{$page}</div>
+</body>
+</html>

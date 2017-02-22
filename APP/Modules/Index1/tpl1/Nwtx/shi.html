@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{:session('title')}</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="{:session('key')}" />
+    <meta name="description" content="{:session('describe')}" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/indexstyle.css">
+</head>
+<body>
+<div class="header">
+	<img src="__PUBLIC__/Images/bg.jpg" width="100%" >
+	<div  class="logo">
+		<a href=""><img src="__PUBLIC__/Images/logo_x.png"></a>
+	</div>
+	<ul class="nav">
+		<li><a href="{:U('Index/Index/index')}">主页<span></span></a></li>
+		<li><a href="{:U('Index/Index/yltx')}">益路童行<span></span></a></li>
+		<li><a href="{:U('Index/Index/lp')}">益路随想<span></span></a></li>
+		<li class="first"><a href="{:U('Index/Nwtx/index')}">你我童行<span></span></a></li>
+		<li><a href="{:U('Index/Ylsz/index')}">益路拾珍<span></span></a></li>
+		<li><a href="{:U('Index/Axtx/index')}">爱心童行<span></span></a></li>
+		<li><a href="{:U('Index/Ylwj/index')}">益路无疆<span></span></a></li>
+		<div class="line"></div>
+	</ul>
+<div class="header_con">
+		<p>完成公里数：{:session('km')}公里</p>
+		<p>捐款总额：{:session('money')}元</p>
+		<p>截止于：{:session('day')}</p>
+	</div>
+</div>
+<div class="container">
+	<div class="plan_left">
+		<!--<div class="intro">
+			<img src="__PUBLIC__/Images/icon_yuan.png"/>
+			<span>同行风采</span>
+		</div>
+		<div class="intro_list">
+			<a href="">
+				<img src="__PUBLIC__/Images/icon_xian.png" class="icon_xian">
+				<span>同行风采</span>
+				<img src="__PUBLIC__/Images/icon_san.png" class="icon_san">
+			</a>
+		</div>
+		--><div class="intro">
+			<img src="__PUBLIC__/Images/icon_yuan.png"/>
+			<span>同行寄语</span>
+		</div>
+			<div class="intro_list">
+				<a href="{:U('Index/Nwtx/shi')}/id/{$v.id}">
+					<img src="__PUBLIC__/Images/icon_xian.png" class="icon_xian">
+					<span>童行寄语</span>
+					<img src="__PUBLIC__/Images/icon_san.png" class="icon_san">
+				</a>
+			</div>
+		<div class="name">
+			<span>报名徒步</span>
+			<div>
+				<img src="__PUBLIC__/Images/wx.jpg"/>
+				<p>关注“益路童行”微信公众号</p>
+			</div>
+			<div>
+				<img src="__PUBLIC__/Images/wb.jpg"/>
+				<p>关注“益路童行”微信公众号</p>
+			</div>
+			<div>
+				<img src="__PUBLIC__/Images/wb.jpg"/>
+				<p>关注“益路童行”微信公众号</p>
+			</div>
+		</div>
+
+	</div>
+	<div class="plan_right">
+		<div class="xin">
+			<img src="__PUBLIC__/Images/xin.PNG"/>
+		</div>
+		<div class="con">
+			<div class="top">
+				<h2 class="red">【你我童行】同行寄语</h2>
+			</div>
+			<div class="poem one">
+				<img src="{$image[0]['image']}"/ width="100%">
+				<span>{$image[0]['author']}</span>
+			</div>
+			<div class="poem">
+					{$image[0]['content']}
+			</div>
+			<foreach name="data" item="v">
+				<div class="poem">
+					<span>{$v.author}</span>
+					{$v.content}
+				</div>
+			</foreach>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<div class="foot">
+			<ul>
+				<li><a href="">隐私保护 </a></li>
+				<li><a href="">服务条款</a></li>
+				<li><a href="">意见反馈 </a></li>
+				<li><a href="">联系我们 </a></li>
+			</ul>
+	        <p>© Copyright 2016     版权所有“益路童行”</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
+
+
+

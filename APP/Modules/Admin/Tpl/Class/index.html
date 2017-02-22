@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+	<style>
+		.table td{text-align:center;}
+	</style>
+</head>
+<body>
+	<table class='table table-bordered' style='width:80%;margin:10px auto;'>
+		<tr>
+			<td>介绍</td>
+		</tr>
+		<tr>
+			<td>ID</td>
+			<td>分类</td>
+			<td>操作</td>
+		</tr>
+		<foreach name='data' item='v'>
+			<tr>
+				<td>{$v.id}</td>
+				<td>{$v.name}</td>
+				<td>
+					<a href="{:U('Class/sonclass', array('id' => $v['id']))}" class='btn btn-primary'>进入子分类</a>
+					<a href="{:U('Class/add', array('id' => $v['id']))}" class='btn btn-primary'>添加子分类</a>
+					<a href="{:U('Class/update', array('id' => $v['id']))}" class='btn btn-primary'>修改</a>
+					<a href="{:U('Class/del',array('id' => $v['id']))}" class='btn btn-danger'>删除</a>
+				</td>
+			</tr>
+		</foreach>	
+	</table>
+	<div style='text-align: center;margin: 0 auto;'>{$page}</div>
+</body>
+</html>

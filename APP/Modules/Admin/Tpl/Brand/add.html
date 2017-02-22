@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>增加</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+	<link rel="stylesheet" href="__ROOT__/Public/Uploadify/uploadify.css" />
+	<script type="text/javascript" src='__ROOT__/Public/Uploadify/jquery.uploadify.js'></script>
+</head>
+<body>
+	<form action="{:U('add')}" method='post'>
+		<table class='table table-bordered' style='width:80%;margin:10px auto;'>
+			<tr>
+				<td>主题</td>
+				<td>
+					<input type="text" name='name'/>
+				</td>
+			</tr>
+			<tr>
+				<td>类型</td>
+				<td>
+					<SELECT id="idState"  name="type" >
+						<OPTION value="image">益路图片</OPTION>
+						<OPTION value="trip">已行行程图片</OPTION>
+						<OPTION value="vedio">益路视频</OPTION>
+						<OPTION value="other">其他</OPTION>
+					</SELECT> 
+				</td>
+				<input type="hidden" name='path' id="path"/>
+			</tr>
+			<tr>
+				<td>描述</td>
+				<td>
+					<input type="text" name='describe'/>
+				</td>
+			</tr>
+			<tr>
+				<td>文件</td>
+				<td>
+					<input type="file" name='logo' id='logo'/>
+					<div id='logo-wrap'></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='2' align='center'>
+					<input type="submit" class='btn' value="上传"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+<style type="text/css">
+    .uploadify-button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+    .uploadify:hover .uploadify-button {
+        background-color: transparent;
+    }
+</style> 
+	<script type="text/javascript">
+	var str = '';
+		$(function() {
+			$("#logo").uploadify({
+				buttonImage	: '__ROOT__/Public/Uploadify/btn.png',
+				swf			: '__ROOT__/Public/Uploadify/uploadify.swf',
+				uploader	: '{:U("upload")}',
+				//解决SESSION掉失问题
+				formData	: {'<?php echo session_name();?>' : '<?php echo session_id();?>'},
+				onUploadSuccess : function(file, data, response) {
+					eval('data=' + data);
+					str += '|'+data.name;
+					$('#path').val(str);
+		        }
+			});
+			//删除文件
+			$('.delimg').live('click', function () {
+				var obj = $(this).parent();
+				var file = $(this).next().val();
+				$.post('{:U(delPic)}', {'file' : file}, function (data) {
+					if (data == 1)
+					{
+						obj.empty();
+					}
+					else
+					{
+						alert('删除失败');
+					}
+				}, 'json');
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{:session('title')}</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="{:session('key')}"/>
+    <meta name="description" content="{:session('describe')}"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/indexstyle.css">
+</head>
+<body>
+<div class="header">
+    <img src="__PUBLIC__/Images/bg.jpg" width="100%">
+    <div class="logo">
+        <a href=""><img src="__PUBLIC__/Images/logo_x.png"></a>
+    </div>
+    <ul class="nav">
+        <li><a href="{:U('Index/Index/index')}">主页<span></span></a></li>
+        <li><a href="{:U('Index/Index/yltx')}">益路童行<span></span></a></li>
+        <li><a href="{:U('Index/Index/lp')}">益路随想<span></span></a></li>
+        <li><a href="{:U('Index/Nwtx/index')}">你我童行<span></span></a></li>
+        <li class="first"><a href="{:U('Index/Ylsz/index')}">益路拾珍<span></span></a></li>
+        <li><a href="{:U('Index/Axtx/index')}">爱心童行<span></span></a></li>
+        <li><a href="{:U('Index/Ylwj/index')}">益路无疆<span></span></a></li>
+        <div class="line"></div>
+    </ul>
+    <div class="header_con">
+        <p>完成公里数：<span><a href="{:U('Detailed/index')}">{:session('km')}</a></span>公里</p>
+        <p>捐款总额：<span><a href="{:U('Detailed/money')}">{:session('money')}</a></span>万元</p>
+        <p>截止于：{:session('day')}</p>
+    </div>
+</div>
+<div class="container">
+    <div class="plan_left">
+        <foreach name="one" item="v">
+            <div class="intro">
+                <img src="__PUBLIC__/Images/icon_yuan.png"/>
+                <span>{$v.name}</span>
+            </div>
+            <foreach name="v.two" item="n">
+                <div class="intro_list">
+                    <img src="__PUBLIC__/Images/icon_xian.png" class="icon_xian">
+                    <span class="red"><a href="{:U('Index/Ylsz/index')}/id/{$v.id}">{$n.name}</a></span>
+                    <img src="__PUBLIC__/Images/icon_san.png" class="icon_san">
+                </div>
+            </foreach>
+        </foreach>
+        <div class="name">
+            <span><a href="{:U('Index/Ylwj/cy')}" style="color:#fff;">报名徒步</a></span>
+            <div>
+                <img src="__PUBLIC__/Images/wx.jpg"/>
+                <p>关注“益路童行”微信公众号</p>
+            </div>
+            <div>
+                <img src="__PUBLIC__/Images/wb.jpg"/>
+                <p>关注“益路童行”微博公众号</p>
+            </div>
+            <div>
+                <img src="__PUBLIC__/Images/bk.jpg"/>
+                <p>关注“益路童行”博客公众号</p>
+            </div>
+        </div>
+
+    </div>
+    <style type="text/css">
+        .sp_list {
+            width: 305px;
+            float: left;
+            margin: 0 33px 10px 0;
+        }
+
+        .sp_list span {
+            display: block;
+            line-height: 40px;
+            color: #333;
+            text-align: center;
+        }
+
+        .wj_con {
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .videos {
+            width: 310px;
+            height: 235px;
+            background: transparent url(__PUBLIC__/Images/video.jpg) 0 0 no-repeat;
+            margin: 0px 57px 0 0;
+        }
+    </style>
+    <div class="plan_right">
+        <div class="xin">
+            <img src="__PUBLIC__/Images/xin.PNG"/>
+        </div>
+        <if condition="$one[1]['id'] == $id">
+            <div class="con">
+                <div class="top">
+                    <h2 class="red">【益路拾珍】益路图片</h2>
+                </div>
+                <foreach name="query" item="v">
+                    <div class="sz_con">
+                        <div class="sz_left">
+                            <img src="/Uploads/File/{$v['images'][0]}" width="100%">
+                        </div>
+                        <div class="sz_right">
+                            <h3>{$v.title}</h3>
+                            {$v.describe}
+                            <a href="{:U('Index/Ylsz/xq')}/id/{$v.id}" class="bottom">查看详情</a>
+                        </div>
+                    </div>
+                </foreach>
+                <div class="page">
+                    {$page}
+                </div>
+            </div>
+            <else/>
+            <div class="con">
+                <div class="top">
+                    <h2 class="red">【益路无疆】媒体报道</h2>
+                </div>
+                <div class="wj_con">
+                    <div class="sp_list">
+                        <div class="videos">
+                            <div class="video-content">
+                                <video id="videoId1" controls name="media" height="233" width="350">
+                                    <source src="http://vod.v.jstv.com/2016/10/30/JSTV_JSCS_1477827546018_yj56adS_1165.mp4"
+                                            type="video/mp4" height="233" width="350">
+                                </video>
+                            </div>
+                        </div>
+                        <span>江苏-电视台采访</span>
+                    </div>
+                    <div class="sp_list">
+                        <div class="videos">
+                            <div class="video-content">
+                                <embed src="http://player.youku.com/player.php/sid/XMjE3NjEwNTM2MA==/v.swf"
+                                       allowFullScreen="true" quality="high" width="350" height="233" align="middle"
+                                       allowScriptAccess="always" type="application/x-shockwave-flash">
+                                </embed>
+                            </div>
+                        </div>
+                        <span>阜宁-电视台采访</span>
+                    </div>
+                </div>
+            </div>
+
+        </if>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="foot">
+            <ul>
+                <li><a href="">隐私保护 </a></li>
+                <li><a href="">服务条款</a></li>
+                <li><a href="">意见反馈 </a></li>
+                <li><a href="">联系我们 </a></li>
+            </ul>
+            <p>© Copyright 2016 版权所有“益路童行”。<a href="http://www.miitbeian.gov.cn" target="_blank"> 沪ICP备12047840号-2</a></p>
+        </div>
+    </div>
+</footer>
+</body>
+<script type="text/javascript">
+    var Media1 = document.getElementById("videoId1");
+    var Media2 = document.getElementById("videoId2");
+    Media1.addEventListener("play", function () {
+        Media2.pause();
+
+    });
+    Media2.addEventListener("play", function () {
+        Media1.pause();
+
+    });
+</script>
+</html>
+
+
+

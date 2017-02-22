@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+</head>
+<style type="text/css">
+	li{list-style: none;}
+</style>
+<body>
+	<ul>
+		<li>
+			您好，{$Think.session.username}您的上一次登陆时间是{$Think.session.logintime}
+		</li>
+		<li>
+			当前PHP版本：{$hd.data.version}
+		</li>
+		<li>
+			当前的服务器系统：{$hd.data.os}
+		</li>
+		<li>
+			当前的服务器环境：{$hd.data.software}
+		</li>
+		<li>
+			当前的MYSQL版本：{$hd.data.mysql}
+		</li>
+	</ul>
+</body>
+</html>

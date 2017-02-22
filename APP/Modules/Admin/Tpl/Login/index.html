@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/login.css" />
+	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/login.js'></script>
+	<script type="text/javascript">
+			var URL = '{:U(GROUP_NAME . "/Login/verify")}/';
+	</script>
+</head>
+<body>
+	<div id="box">
+	<form action="" method='post'>
+			<img src="__PUBLIC__/Images/main_01.jpg" class="top" />
+			<div class="login_box">
+				<div class="user">
+					<span>用户名:</span>
+					<input type="text" name='username' class="style-btn"/>
+				</div>
+				<div class="user">
+					<span>密码:</span>
+					<input type="password" name='password' class="style-btn"/>
+				</div>
+				<div class="verify">
+					<span>验证码:</span>
+					<input type="text" name='code' class="style-btn" id="verify_input"/>
+					<img src="{:U(GROUP_NAME . '/Login/verify')}" id='code'/>
+					<a href="javascript:void(0);"class='kan' style='font-size:12px;'>看不清</a>
+				</div>
+				<input type="submit" value="" class="login_btn" name='submit'/>
+			</div>
+		</form>	
+	</div>
+</body>
+</html>

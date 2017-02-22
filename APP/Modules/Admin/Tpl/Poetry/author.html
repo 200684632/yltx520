@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+	<link rel="stylesheet" href="__ROOT__/Public/Uploadify/uploadify.css" />
+	<script type="text/javascript" src='__ROOT__/Public/Uploadify/jquery.uploadify.js'></script>
+	<script type="text/javascript" src='__ROOT__/Public/Ueditor/ueditor.config.js'></script>
+	<script type="text/javascript" src='__ROOT__/Public/Ueditor/ueditor.all.min.js'></script>
+	<script type="text/javascript" src='__ROOT__/Public/js/My97DatePicker/WdatePicker.js'></script>
+</head>
+<body>
+	<form action="{:U('author')}/id/{$goods[0].id}" method='post' enctype="multipart/form-data">
+		<table class='table table-bordered' style='width:80%;margin:10px auto;'>
+			<tr>
+				<th colspan='2'>基本信息</th>
+			</tr>
+			<tr>
+				<td align="right">姓名</td>
+				<td>
+					<input type="text" name='name'/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">简介</td>
+				<td>
+					<textarea name="text"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">图片</td>
+				<td>
+					<input type="file" name='images'/>
+				</td>
+			</tr>
+			<tr>
+			<td>
+			<input type="hidden" name='tid' value="{$goods.tid}"/>
+			<input type="submit" value='保存修改' class='btn'/>
+			</td>
+			</tr>
+		</table>
+		
+	</form>
+<style type="text/css">
+	.add-spec, .del-spec,.del-photo{
+		display: inline-block;
+		width: 80px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		cursor: pointer;
+		background: #444444;
+		color: #fff;
+		border-radius: 6px;
+	}
+	.del-spec,.del-photo{
+		background: #f00;
+	}
+</style>
+<script type="text/javascript">
+	//百度编辑器
+	window.UEDITOR_HOME_URL = '__ROOT__/Public/Ueditor/';
+	//商品详细
+	window.UEDITOR_CONFIG.imageUrl = '{:U("uploadIntro")}';
+    window.UEDITOR_CONFIG.imagePath = '__ROOT__/Uploads/Intro/';
+	UE.getEditor('intro');
+</script>
+</body>
+</html>

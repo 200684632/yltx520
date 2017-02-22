@@ -1,0 +1,50 @@
+<div class="dh">
+			<div class="Index_dh_top Index_1100">
+				<ul class="Index_nav">
+					<li class="nav_fenlei">全部分类</li>
+					<li><a href="{:U('Index/Index')}">首页</a></li>
+					<foreach name='cate' item='v'>
+						<li class="Index_navbg"></li>
+						<li><a href="{:U('List/index', array('pid' => $v['id'], 'cid' => $v['id']))}">{$v.name}</a></li>
+					</foreach>
+					<li style='position: absolute;right: 0;'>
+						<span style='position: absolute;display: block;     background: url(__PUBLIC__/Images/new01.gif)  no-repeat;     width: 40px;height: 18px;left: -40px;top: 15px;'></span><a href="">韩都商城</a>
+					</li>
+				</ul>
+				<!-- 导航条二 -->
+					<ul class="Index_nav02">
+						<li>
+							<a href="" style="color:#bf0000">盛夏必败</a>
+						</li>
+						<li>
+							<a href="">热卖TOP榜单</a>
+						</li>
+						<li>
+								<a href="">风尚新品</a>
+						</li>
+						<li>
+							<a href="">秒杀专区</a>
+						</li>
+						<li>
+							<a href="">折扣专区</a>
+						</li>
+					</ul>
+				<div id="Index_fenlei" class='Index_fenlei'>
+					<ul class="fenlei">
+						<foreach name='cate' item='s'>
+							<li>
+								<div class="icon icon">{$s.name}</div>
+								<div class="fenlei_list">
+									<foreach name='s.child' item='c'>
+									<a href="{:U('List/index', array('pid' => $c['id'], 'cid' => $c['id']))}">{$c.name}</a>
+									</foreach>
+								</div>
+							</li>
+						</foreach>
+					</ul>
+					
+				<!-- 分类列表开始 -->
+				</div>
+			</div>
+		</div>
+		

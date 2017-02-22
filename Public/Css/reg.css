@@ -1,0 +1,238 @@
+*, body {
+    font-family: 'Microsoft YaHei';
+    margin: 0;
+    padding: 0;
+}
+div, p, span, h1, h2, h3, ul, li {
+    float: left;
+    font-size: 12px;
+}
+li{list-style: none;}
+a, a:hover {
+    color: #393939;
+    text-decoration: none;
+}
+.login_head {
+    background: none repeat scroll 0 0 #C80A28;
+    float: left;
+    height: 80px;
+    overflow: hidden;
+    width: 100%;
+}
+.login_head .login_headCon {
+    float: none;
+    margin: 0 auto;
+    width: 1100px;
+}
+.login_head .login_headCon .login_headCon_logo {
+    background: url("../Images/NEWS_login.png") no-repeat scroll -199px -457px transparent;
+    float: left;
+    height: 41px;
+    margin-top: 20px;
+    width: 193px;
+}
+.login_head .login_headCon span.login_headCon_logospan {
+    color: #FFFFFF;
+    float: left;
+    font-size: 14px;
+    margin: 45px 0 0 10px;
+}
+.login_head .login_headCon span.login_headCon_blankspan {
+    color: #FFFFFF;
+    float: right;
+    margin: 45px 0 0 10px;
+}
+
+.login_head .login_headCon span.login_headCon_blankspan a {
+    color: #FFFFFF;
+}
+
+.register {
+    float: none;
+    margin: 0 auto;
+    width: 1100px;
+}
+.register_left {
+    border-right: 1px dashed #DDDDDD;
+    height: 600px;
+    margin: 30px 0 0;
+    width: 670px;
+}
+.register_left .register_matel {
+    border-bottom: 1px dashed #DDDDDD;
+    height: 60px;
+    line-height: 50px;
+    width: 645px;
+}
+.register_num {
+    background: url("../Images/NEWS_login.png") no-repeat scroll 0 -326px transparent;
+    color: #FFFFFF;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin: 13px 0 0;
+    text-align: center;
+    width: 22px;
+}
+.register_numName {
+    line-height: 50px;
+    margin-left: 8px;
+}
+.register_fs {
+    margin: 8px 0 0;
+    width: 300px;
+}
+.register_fs a {
+    background: url("../Images/NEWS_login.png") no-repeat scroll 0 -102px transparent;
+    border: medium none;
+    display: block;
+    float: left;
+    font-size: 14px;
+    height: 38px;
+    line-height: 32px;
+    margin-left: 10px;
+    text-align: center;
+    width: 135px;
+}
+.register_fs a.register_emailbtn {
+    background-position: 0 -102px;
+    color: #FFFFFF;
+}
+.register_fs a.register_telphonebtn {
+    background-position: 0 -151px;
+    color: #393939;
+}
+
+.register_mail {
+    margin: 20px 0 0;
+}
+.register_mail ul.register_list {
+    margin: 0;
+    padding: 0;
+    width: 580px;
+}
+
+.register_mail ul.register_list li {
+    line-height: 33px;
+    width: 580px;
+}
+.register_mail ul.register_list li .register_list_name {
+    color: #393939;
+    float: left;
+    text-align: right;
+    width: 115px;
+}
+
+.register_mail ul.register_list li input.register_list_txt {
+    background: url("../Images/shopping_login.png") no-repeat scroll 0 -182px transparent;
+    border: medium none;
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    text-indent: 5px;
+    width: 210px;
+}
+.register_mail ul.register_list li .register_list_tishi {
+    color: #BF0000;
+    float: left;
+    text-align: right;
+    margin-top: 3px;
+}
+.register_mail ul.register_list li .register_list_neirong {
+    color: #7B7B7B;
+    float: left;
+    text-indent: 115px;
+    width: 600px;
+}
+
+.register_mail ul.register_list li .register_list_xieyi {
+    color: #393939;
+    float: left;
+    font-size: 16px;
+    margin-top: 10px;
+    text-indent: 115px;
+}
+.register_mail ul.register_list li input.register_list_regree {
+    background: url("../Images/NEWS_login.png") no-repeat scroll 0 -51px transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 18px;
+    height: 43px;
+    margin: 10px 0 0 120px;
+    width: 171px;
+}
+.register_right {
+    margin: 40px 0 0 30px;
+    width: 360px;
+}
+.register_right .register_right_list {
+    font-size: 13px;
+    line-height: 40px;
+    width: 360px;
+}
+.register_right_listName {
+    font-size: 13px;
+}
+input.register_loginbtn {
+    background: url("../Images/NEWS_login.png") no-repeat scroll -347px -211px transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    height: 29px;
+    letter-spacing: 1px;
+    line-height: 29px;
+    margin: 8px 0 0 10px;
+    width: 103px;
+}
+.register_right .login_other_btn {
+    float: left;
+    width: 230px;
+}
+.register_right .login_other_btn span.login_other_btn00 {
+    background: url("../Images/NEWS_login.png") no-repeat scroll 0 -528px transparent;
+    float: left;
+    height: 29px;
+    margin: 10px 0 0 10px;
+    width: 97px;
+}
+.register_right .login_other_btn span.login_other_btn11 {
+    background: url("../Images/NEWS_login.png") no-repeat scroll -111px -528px transparent;
+}
+.register_right .login_other_btn span.login_other_btn22 {
+    background: url("../Images/NEWS_login.png") no-repeat scroll -222px -528px transparent;
+}
+.register_right .login_other_btn span.login_other_btn33 {
+    background: url("../Images/NEWS_login.png") no-repeat scroll -333px -528px transparent;
+}
+.Index_foot_black {
+    background: none repeat scroll 0 0 #393939;
+    color: #FFFFFF;
+    float: left;
+    font-family: 'Microsoft YaHei';
+    font-size: 13px;
+    height: 36px;
+    line-height: 36px;
+    margin-top: 8px;
+    text-align: center;
+    width: 1100px;
+}
+.Index_foot_black span {
+    float: right;
+    margin-right: 10px;
+}
+.Index_foot_black a {
+    color: #FFFFFF;
+    margin: 0 10px;
+}
+img {
+    border: 0 none;
+}
+.Index_foot_pinpai {
+    background: url("../Images/NEWS_INDEX.gif") no-repeat scroll 0 -277px transparent;
+    float: left;
+    height: 48px;
+    margin: 0 0 0 10px;
+    width: 1080px;
+}

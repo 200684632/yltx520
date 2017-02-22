@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+	<link rel="stylesheet" href="__PUBLIC__/Css/index.css" />
+	<script type="text/javascript">
+		function resize_window(){
+			$("#left").height($(window).height()+200);
+			$("#right").height($(window).height()+200).width($(window).width()-201);
+			}
+			$(function () {
+				resize_window();
+				$(window).resize(function(){
+					resize_window();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="top">
+		
+		<ul class="exit">
+			
+			<li>
+				<a  href="{:U('zhongxin')}" target=_top>[修改密码]
+				</a>
+				<a onclick="if (confirm('确定要退出吗？')) return true; else return false;" href="{:U('logout')}" target=_top>[退出登录]
+				</a>
+			</li>
+			<li>您好！<span>{$Think.session.username}</span></li>
+		</ul>
+	</div>
+	<div id="left" style="height: 800px;">
+		<dl>
+			<dt>配置信息</dt>
+			<dd><a href="{:U('Feeling/cofmsg')}" target="iframe">配置信息</a></dd>
+			<dd><a href="{:U('Class/index')}" target="iframe">分类管理</a></dd>
+			<dd><a href="{:U('Index/bm')}" target="iframe">天数配置</a></dd>
+			<dd><a href="{:U('Index/addadmin')}" target="iframe">添加管理员</a></dd>
+		</dl>
+		<foreach name="one" item="v">
+			<dl>
+				<dt>{$v.name}</dt>
+				<foreach name="v['two']" item="n">
+					<if condition="$v['id']==4">
+						<dd><a href="{:U('Brand/index')}" target="iframe">{$n.name}</a></dd>
+					<else/>
+						<if condition="$n['id']==12">
+							<dd><a href="{:U('Poetry/index')}/type/msg" target="iframe">{$n.name}</a></dd>
+						<else/>
+							<dd><a href="{:U('Feeling/index')}/pid/{$n.id}" target="iframe">{$n.name}</a></dd>
+						</if>
+					</if>
+				</foreach>
+			</dl>
+		</foreach>
+		<dl>
+			<dt><a href="{:U('Feeling/classshow')}/type/feeling" target="iframe">添加</a></dt>
+		</dl>
+	</div>
+	<div id="right">
+		<iframe src="{:U('copy')}" name="iframe"  scrolling="no"></iframe>
+	</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background:url(../Images/login_bg.gif);
+}
+#box{
+	width: 776px;
+	height: 569px;
+	margin: 0 auto;
+	background: url(../Images/login.jpg) no-repeat;
+	position: relative;
+}
+img.top{
+	position: absolute;
+	width:400px;
+	height:60px;
+	top:190px;
+	left: 200px;
+}
+div.login_box{
+	width: 400px;
+	height: 120px;
+	position: absolute;
+	left:200px;
+	top: 260px;
+}
+div.user{
+	float: left;
+	margin: 0 0 0 10px;
+	width:250px;
+	height: 30px;
+	line-height: 30px;
+}
+div.user span{
+	display: inline-block;
+	width:70px;
+}
+div.verify{
+	float: left;
+	width:400px;
+	margin-left: 10px;
+	line-height: 30px;
+	position: relative;
+}
+div.verify span{
+	display: inline-block;
+	width:70px;
+}
+input.login_btn{
+	display: block;
+	width: 82px;
+	height: 47px;
+	background: url(../Images/userLogin_button.gif) no-repeat;
+	position: absolute;
+	right: 20px;
+	top: 5px;
+
+}
+
+input.style-btn {
+	height: 20px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link rel="stylesheet" href="__ROOT__/Public/Uploadify/uploadify.css" />
+<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+<style type="text/css">
+	div{ float:left;}
+</style>
+</head>
+<body>
+<form action="{:U('Index/zhongxin')}"  method='post'>
+		<table class='table table-bordered' style='width:80%;margin:10px auto;'>
+			<tr>
+				<td>用户名:</td>
+				<td>
+					<input type="text" name="name"  />
+				</td>
+			</tr>
+			<tr>
+				<td>请输入原始密码密码:</td>
+				<td>
+					<input type="password" name='psw'/>
+				</td>
+			</tr>
+			<tr>
+				<td>请输入新密码密码:</td>
+				<td>
+					<input type="password" name="newpsw" />
+				</td>
+			</tr>
+			<tr>
+				<td>请再次新密码密码:</td>
+				<td>
+					<input type="password" name="newpsw1" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan='2' align='center'>
+					<input type="submit" class='btn' value="提交"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+<script type="text/javascript">
+</script>
+</html>

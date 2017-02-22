@@ -1,0 +1,11 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+form{
+	width: 50%;
+	height:100px;
+	margin:200px auto;
+	text-align: center;
+	border: 1px #a10000 solid;
+}

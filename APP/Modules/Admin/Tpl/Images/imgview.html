@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+</head>
+<body>
+	<table class='table table-bordered' style='width:80%;margin:10px auto;'>
+		<tr>
+			<td>ID</td>
+			<td>标题</td>
+			<td>操作</td>
+		</tr>
+
+		<foreach name='goods' item='v'>
+			<tr>
+				<td>{$v.id}</td>
+				<td>
+					<a href="{:U('Poetry/Show/index',array('gid' => $v['id']))}" target='_blank'>{$v.title}</a>
+				</td>
+				<td>
+					<foreach name='images' item='y'>
+						<img src="{$y}" width = "50px" heigth="50px" alt="找不到图片了">
+					</foreach>
+				</td>
+			</tr>
+		</foreach>
+	</table>
+	<div style='text-align: center;margin: 0 auto;'>{$page}</div>
+</body>
+</html>

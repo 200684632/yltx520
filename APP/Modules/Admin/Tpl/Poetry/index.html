@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+	<style>
+		.table td{text-align:center;}
+	</style>
+</head>
+<body>
+	<table class='table table-bordered' style='width:80%;margin:10px auto;'>
+		<tr>
+			<td>介绍</td>
+		</tr>
+		<tr>
+			<td>ID</td>
+			<td>作者</td>
+			<td>简介</td>
+			<td>图片</td>
+			<td>操作</td>
+		</tr>
+
+		<foreach name='goods' item='v'>
+			<tr>
+				<td>{$v.id}</td>
+				<td>
+					{$v.author}
+				</td>
+				<td>{$v.title}</td>
+				<td><img src="{$v.image}" width="100" height="100" /></td>
+				<td>
+					<a href="{:U('Poetry/updataauthor', array('id' => $v['id']))}" class='btn btn-primary'>编辑作者</a>
+					<a href="{:U('Poetry/xq', array('id' => $v['id']))}" class='btn btn-primary'>编辑诗集</a>
+					<a href="{:U('Poetry/add',array('id' => $v['id']))}" class='btn btn-danger'>添加诗集</a>
+					<a href="{:U('Poetry/del',array('id' => $v['id']))}" class='btn btn-danger'>删除</a>
+				</td>
+			</tr>
+		</foreach>	
+		<tr><td colspan="5"><a class="btn btn-primary" href="{:U('Poetry/author')}">添加诗人</a></td></tr>
+	</table>
+	<div style='text-align: center;margin: 0 auto;'>{$page}</div>
+</body>
+</html>

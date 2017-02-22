@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link rel="stylesheet" href="__ROOT__/Public/Uploadify/uploadify.css" />
+<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css" />
+<style type="text/css">
+	div{ float:left;}
+</style>
+</head>
+<body>
+<form action="{:U('Index/bm')}"  method='post'>
+		<table class='table table-bordered' style='width:80%;margin:10px auto;'>
+			<tr>
+				<td>月份</td>
+				<td>
+					<SELECT id="idState"  name="m" onchange="sj()">
+						<OPTION value="9">9月</OPTION>
+						<OPTION value="10">10月</OPTION>
+						<OPTION value="11">11月</OPTION>
+						<OPTION value="12">12月</OPTION>
+					</SELECT> 
+				</td>
+			</tr>
+			<tr>
+				<td>路程</td>
+				<td id="tr">
+				</td>
+			</tr>
+			<tr>
+				<td colspan='2' align='center'>
+					<input type="submit" class='btn' value="提交"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+<script type="text/javascript">
+function DayNumOfMonth(Month)
+{
+    var d = new Date(2016,Month,0);
+    return d.getDate();
+}
+function sj(){
+	$('#tr').html('');
+	var month = $('#idState').val();
+	for (var i=1;i<DayNumOfMonth(month)+1;i++) {
+	$('#tr').append('第'+i+'天:<input type="text" name="arrive'+i+'" />');
+	}
+}
+</script>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src='__ROOT__/Public/Js/My97DatePicker/WdatePicker.js'></script>
+	<style type="text/css">
+		.panel-table{margin:40px 0 0 40px;}
+.panel-right-content .panel-article .panel-table {
+    position: relative;
+    border-top: 3px solid #eaeaea;
+    z-index:222;
+ 
+}
+
+.panel-right-content .panel-article .panel-table:before {
+    content: "";
+    width: 110px;
+    height: 3px;
+    background-color: #c00e12;
+    position: absolute;
+    top: -3px;
+    left: 0px;
+}
+
+.panel-right-content .panel-article .panel-table .table-wrapper {
+    margin-left: 90px;
+    ;
+    margin-top: 20px;
+    font-size: 16px;
+    height: 38px;
+    line-height: 38px
+}
+
+.panel-table .table-wrapper .table-star {
+    margin: 0 15px
+}
+
+.panel-table .table-wrapper .input-style {
+    height: 38px;
+    font-size: 16px;
+    padding-left: 16px;
+    outline: none;
+    border: 1px solid #eaeaea
+}
+
+.panel-table .table-wrapper .input-theme {
+    width: 532px
+}
+
+.panel-table .table-wrapper .input-date {
+    width: 238px;
+    margin-right: 35px
+}
+.table-wrapper,.table-wrapper.clearfloat{overflow: hidden;margin-bottom:15px;}
+
+.panel-table .table-wrapper .input-radio {
+    vertical-align: top;
+    padding: 0 10px;
+    text-align: right;
+    float: right
+}
+
+.panel-table .table-wrapper .input-address {
+    width: 423px
+}
+
+.panel-table .table-wrapper .text-flf {
+    float: left;
+}
+
+.panel-table .wrapper-pari {
+    padding-right: 130px
+}
+
+.panel-table .tabel-submit {
+    cursor: pointer;
+    display: block;
+    width: 202px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 46px auto 0;
+    font-size: 20px;
+    background-color: #c00e12;
+    color: #fff;
+	border: none;
+}
+
+.panel-table .table-form .div-height {
+    height: 100px
+}
+
+.article-idea-pad {
+    margin-left: 50px;
+    font-size: 14px;
+}
+
+
+/*您创想样式结束*/
+
+
+/*益路历程样式开始*/
+
+.panel-article .table-new {
+    padding: 1px 10px 50px;
+}
+
+.panel-article .table-new li {
+    margin-top: 30px;
+    clear: both;
+    display: block;
+}
+
+.panel-article .table-new .news-date {
+    margin-left: 35px;
+    border-right: 1px solid #f0f0f0;
+    margin-right: 20px;
+}
+
+.panel-article .table-new .news-date p {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 18px
+}
+
+.panel-article .table-new .news-date p.date-year {
+    font-size: 20px;
+}
+
+.panel-article .table-new .news-detail .news-content {
+    width: 468px;
+}
+
+.panel-article .table-new .news-detail .news-img {
+    width: 214px;
+    height: 138px;
+    margin-right: 24px;
+}
+
+.news-content h1 {
+    font-size: 16px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.news-content p {
+    line-height: 180%;
+    font-size: 13px !important;
+    padding: 10px 0;
+}
+
+.panel-article .table-new .news-detail .news-content .news-content-detail {
+    margin: 8px 0;
+    line-height: 24px;
+    font-size: 13px!important;
+}
+
+.panel-article .table-new .news-detail .news-content .news-btn {
+    width: 112px;
+    height: 32px;
+    background-color: #fff;
+    border: 2px solid #f0f0f0;
+    text-align: center;
+    line-height: 32px;
+    bottom: 10px;
+}
+
+.news-content .news-btn a {
+    color: #597559;
+}
+
+
+/*益路历程样式结束*/
+
+
+/*报名同行样式开始*/
+
+.table-wrapper .start-end {
+    padding-right: 10px;
+}
+
+.table-wrapper .end-arrived {
+    padding-left: 107px;
+}
+
+.panel-right-content .panel-article .panel-table .submit-enter {
+    margin-top: 112px;
+}
+
+.table-wrapper .table-end {
+    margin-top: 20px;
+}
+
+
+/*报名同行样式结束*/
+
+
+/*资料下载样式开始*/
+
+.panel-right-content .panel-table li {
+    padding: 10px;
+}
+
+.panel-right-content .panel-table .num {
+    margin: 0 5px;
+}
+
+	</style>
+</head>
+<body>
+ <div class="panel-table" style="text-align:center;">
+                            <form method="post" action="{:U('Feeling/upcofmsg')}" class="table-form">
+                                <div class="table-wrapper">
+                                    <span class="table-thead">网站标题</span><span class="article-color table-star">*</span>
+                                    <input name="zhuti" type="text" class="input-style input-theme" value="{$goods[0].title}" placeholder="请输入网站标题">
+                                </div>
+                                <div class="table-wrapper clearfloat">
+                                    <span class="table-thead">关键字&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="article-color table-star">*</span>
+                                    <input name="company" type="text" class="input-style input-theme" value="{$goods[0].key}" placeholder="请输入关键字">
+                                </div>
+                                <div class="table-wrapper">
+                                    <span class="table-thead">公里数&nbsp;&nbsp;&nbsp;</span><span class="article-color table-star">*</span>
+                                    <input name="km" type="text" class="input-style input-theme" title='默认单位为"Km"' value="{$goods[0].km}" placeholder="请输入已行公里数">
+                                </div>
+                                <div class="table-wrapper clearfloat">
+                                    <span class="table-thead">总捐款金额</span><span class="article-color table-star">*</span>
+                                    <input name="money" type="text" class="input-style input-theme" title='默认单位为"万元"' value="{$goods[0].money}" placeholder="请输入总捐款金额">
+                                </div>
+                                <div class="table-wrapper clearfloat">
+                                    <span class="table-thead">截止日期</span><span class="article-color table-star">*</span>
+                                    <input name="date" type="text" class="input-style input-theme" title='请填写您的截止日期' value="{$goods[0].day}" placeholder="请输入截止日期"  readonly="readonly" onfocus="WdatePicker({dateFmt:'yyyy年MM月dd日'})" >
+                                </div>
+                                 <div class="table-wrapper clearfloat" >
+                                    <div >
+                                        <span class="table-thead">网站描述</span><span class="article-color table-star">*</span>
+                                        <textarea name="content" rows="12" cols="67"  required placeholder="请输入网站描述" class="fosi-16">{$goods[0].describe}</textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="tabel-submit clearfloat">确定</button>
+                            </form>
+            </div>
+</body>
+</html>

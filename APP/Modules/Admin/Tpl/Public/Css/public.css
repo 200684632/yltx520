@@ -1,0 +1,13 @@
+
+*{padding: 0;margin: 0;}
+table{width: 100%;}
+table,th,td{border-collapse: collapse;background:#fff;}
+th{ text-align: center;}
+th,td{padding:8px 8px;}
+input,button{ border:solid 1px #ddd;height:25px;padding:3px 6px;color:#000;background:#fff; vertical-align: middle;}
+
+.table{width:60%;margin:10px auto;}
+.table,.table td{border:solid 1px #ccc;}
+.table th{border:solid 1px #ccc;width:100px;}
+.table thead tr td{background: #eee;color:#333;}
+
